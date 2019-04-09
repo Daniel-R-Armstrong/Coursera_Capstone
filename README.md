@@ -22,12 +22,12 @@ schools
 distance to thinks of interest?    
 
 
-Haversine distance: distance between points on a sphere given(lat/lon) sin^2(θ/2)
-Euclidean distance: ||a-b||2 = √(Σ(ai-bi))
-Squared Euclidean distance: ||a-b||22 = Σ((ai-bi)2)
-Manhattan distance: ||a-b||1 = Σ|ai-bi|
-Maximum distance:||a-b||INFINITY = maxi|ai-bi|
-Mahalanobis distance: √((a-b)T S-1 (-b))   {where, s : covariance matrix}
+Haversine distance: distance between points on a sphere given(lat/lon) sin^2(θ/2)  
+Euclidean distance: ||a-b||2 = √(Σ(ai-bi))  
+Squared Euclidean distance: ||a-b||22 = Σ((ai-bi)2)  
+Manhattan distance: ||a-b||1 = Σ|ai-bi|  
+Maximum distance:||a-b||INFINITY = maxi|ai-bi|  
+Mahalanobis distance: √((a-b)T S-1 (-b))   {where, s : covariance matrix}  
 
 ### Types of clustering algorithms  
   
@@ -41,7 +41,7 @@ think about a dendrograms and how the data is seperated into groups
 
 #### Centroid models: Data clusters is derived by the closeness of the data point to the centroid.   
 Its is an iterative proccess of updating the centroids to find the local optima, so setting the seed could be important for reproducability. You need to define the number of clusters befor hand.   
--**K-Means** 
+- **K-Means** 
 - **Kernel K-Means**
 >> [youtube](https://www.youtube.com/watch?v=ZVhtchqHlHs), [code](https://github.com/ardianumam/Machine-Learning-From-The-Scratch/blob/master/kernel_kMeansClustering.py)  
 >> [other code](https://gist.github.com/mblondel/6230787)  
@@ -68,25 +68,25 @@ Every iteration the sliding window is shifted towards regions of higher density 
 - **OPTICS**  
 
 Testing Clusters
-Silhouette - method of interpretation and validation of consistency within clusters of data.
+- Silhouette - method of interpretation and validation of consistency within clusters of data.
 
 
 
 sources:
 General
-https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68  
-https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/ 
-https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/
-https://www.youtube.com/watch?v=ZVhtchqHlHs    
-https://github.com/ardianumam/Machine-Learning-From-The-Scratch/blob/master/kernel_kMeansClustering.py
-https://gist.github.com/mblondel/6230787 
+- https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68  
+- https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/ 
+- https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/
+- https://www.youtube.com/watch?v=ZVhtchqHlHs    
+- https://github.com/ardianumam/Machine-Learning-From-The-Scratch/blob/master/kernel_kMeansClustering.py
+- https://gist.github.com/mblondel/6230787 
 
 Clustering the US population: observation-weighted k-means
-https://towardsdatascience.com/clustering-the-us-population-observation-weighted-k-means-f4d58b370002
-https://github.com/leapingllamas/medium_posts/tree/master/observation_weighted_kmeans
+- https://towardsdatascience.com/clustering-the-us-population-observation-weighted-k-means-f4d58b370002
+- https://github.com/leapingllamas/medium_posts/tree/master/observation_weighted_kmeans
 
 
 clustering notebooks I liked
->[Cluster NYC Business History](https://github.com/vishelar/PUI2016_vys217/blob/master/HW11_vys217/HW11_2_vys217.ipynb)
->[Identify specific socioechonomic changes in NYC over 10 years](https://github.com/vishelar/PUI2016_vys217/blob/master/Final/PUI2016_final_vys217.ipynb)
+- >[Cluster NYC Business History](https://github.com/vishelar/PUI2016_vys217/blob/master/HW11_vys217/HW11_2_vys217.ipynb)
+- >[Identify specific socioechonomic changes in NYC over 10 years](https://github.com/vishelar/PUI2016_vys217/blob/master/Final/PUI2016_final_vys217.ipynb)
 
