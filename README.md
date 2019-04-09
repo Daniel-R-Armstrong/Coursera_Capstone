@@ -33,8 +33,8 @@ Mahalanobis distance: √((a-b)T S-1 (-b))   {where, s : covariance matrix}
   
 #### Connectivity models: Data closer in space are catigorized as more similar(top-down | bottom-up)  
 Distance function have an impact so which one should we use?   
-> ##### Hierarchical Clustering([more info](https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/)
-think about a dendrograms and how the data is seperated into groups  
+> ##### Hierarchical Clustering([more info](https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/))
+> Think about a dendrograms and how the data is seperated into groups  
 >> **Agglomerative**:(bottom-up) Each observation starts in its own cluster, and pairs of clusters are merged as we move up the hierarchy.  
 >> **Divisive**: (top-down) start with one cluster, then splits are performed recursively down the hierarchy.
 > <img src="https://cdn-images-1.medium.com/max/1000/1*ET8kCcPpr893vNZFs8j4xg.gif" width="450" height="250" />
