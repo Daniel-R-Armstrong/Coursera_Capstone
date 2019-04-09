@@ -18,10 +18,9 @@ roads(big/small)
 rail
 greenbelt
 schools
+distance to things of interest?    
 
-distance to thinks of interest?    
-
-
+## Types of Distances
 Haversine distance: distance between points on a sphere given(lat/lon) sin^2(θ/2)  
 Euclidean distance: ||a-b||2 = √(Σ(ai-bi))  
 Squared Euclidean distance: ||a-b||22 = Σ((ai-bi)2)  
@@ -30,7 +29,7 @@ Maximum distance:||a-b||INFINITY = maxi|ai-bi|
 Mahalanobis distance: √((a-b)T S-1 (-b))   {where, s : covariance matrix}  
 
 ## Types of clustering algorithms    
-### Connectivity models: Data closer in space are catigorized as more similar(top-down | bottom-up)  
+### 1. Connectivity models: Data closer in space are catigorized as more similar(top-down | bottom-up)  
 > Distance function have an impact so which one should we use?   
 - > #### Hierarchical Clustering([more info](https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/))
 > Think about a dendrograms and how the data is seperated into groups  
@@ -38,14 +37,14 @@ Mahalanobis distance: √((a-b)T S-1 (-b))   {where, s : covariance matrix}
 - >> **Divisive**: (top-down) start with one cluster, then splits are performed recursively down the hierarchy.
 > <img src="https://cdn-images-1.medium.com/max/1000/1*ET8kCcPpr893vNZFs8j4xg.gif" width="450" height="250" />
 
-#### Centroid models: Data clusters is derived by the closeness of the data point to the centroid.   
+### 2. Centroid models: Data clusters is derived by the closeness of the data point to the centroid.   
 Its is an iterative proccess of updating the centroids to find the local optima, so setting the seed could be important for reproducability. You need to define the number of clusters befor hand.   
 - **K-Means** 
 - **Kernel K-Means**
 >> [youtube](https://www.youtube.com/watch?v=ZVhtchqHlHs), [code](https://github.com/ardianumam/Machine-Learning-From-The-Scratch/blob/master/kernel_kMeansClustering.py)  
 >> [other code](https://gist.github.com/mblondel/6230787)  
 
-#### Distribution models: Data clusters based on probobalistic distributions
+### 3. Distribution models: Data clusters based on probobalistic distributions
 How probable is it that all data points in the cluster belong to the same distribution (Normal, Gaussian, ect). 
 **Downside**: Overfitting is a common problem.
 - **EM(Expectation-maximization) using Gaussian Mixture Models(GMMs) or multivariate normal distributions** 
@@ -55,7 +54,7 @@ we can compute the probability that each data point belongs to a particular clus
 >  You can have multiple clusters per data point(mixed membership). So if a data point is in the middle of two overlapping clusters(??% class-1 and ??% class-2)
 > <img src="https://cdn-images-1.medium.com/max/1000/1*OyXgise21a23D5JCss8Tlg.gif" width="250" height="250" />
 
-#### Density Models:  
+### 4. Density Models:  
 These models search the data space for areas of varied density of data points in the data space. It isolates various different density regions and assign the data points within these regions in the same cluster.
 - **Mean-Shift Clustering** 
 Every iteration the sliding window is shifted towards regions of higher density by shifting the center point to the mean of the points within the window. No need to select the number of cluster, the biggest drawback is the window size/radius “r” can be non-trivial
