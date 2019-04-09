@@ -36,7 +36,12 @@ Its is an iterative proccess of updating the centroids to find the local optima,
 #### Distribution models: Data clusters based on probobalistic distributions
 How probable is it that all data points in the cluster belong to the same distribution (Normal, Gaussian, ect). 
 **Downside**: Overfitting is a common problem.
-- **EM(Expectation-maximization)** uses multivariate normal distributions
+- **EM(Expectation-maximization) using Gaussian Mixture Models(GMMs) or multivariate normal distributions** 
+> assuming we have a Gaussian distributions(normal)
+we can compute the probability that each data point belongs to a particular cluster, the the higher probability the closer a point is to the clusters center. We then update the set of parameters using a weighed sum to maximize probabilities that the data points are within there given clusters, this proccess can be repeated iteratively until convergence. 
+>clusters can take on any ellipse shape.
+>  You can have multiple clusters per data point(mixed membership). So if a data point is in the middle of two overlapping clusters(??% class-1 and ??% class-2)
+> <img src="https://cdn-images-1.medium.com/max/1000/1*OyXgise21a23D5JCss8Tlg.gif" width="250" height="250" />
 
 #### Density Models:  
 These models search the data space for areas of varied density of data points in the data space. It isolates various different density regions and assign the data points within these regions in the same cluster.
