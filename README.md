@@ -11,11 +11,23 @@ what impacts location?
 can we understand trafic flow  
 housing  
 income  
-poverty   
+poverty
+parks
+forest perserves
+roads(big/small)
+rail
+greenbelt
+schools
+
 distance to thinks of interest?    
 
-Distance:Euclidean VS Haversine distance   
 
+Haversine distance: distance between points on a sphere given(lat/lon) sin^2(θ/2)
+Euclidean distance: ||a-b||2 = √(Σ(ai-bi))
+Squared Euclidean distance: ||a-b||22 = Σ((ai-bi)2)
+Manhattan distance: ||a-b||1 = Σ|ai-bi|
+Maximum distance:||a-b||INFINITY = maxi|ai-bi|
+Mahalanobis distance: √((a-b)T S-1 (-b))   {where, s : covariance matrix}
 
 ### Types of clustering algorithms  
   
@@ -24,7 +36,8 @@ Distance function have an impact so which one should we use?
 > ##### Hierarchical Clustering([more info](https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/)
 think about a dendrograms and how the data is seperated into groups  
 >> **Agglomerative**:(bottom-up) Each observation starts in its own cluster, and pairs of clusters are merged as we move up the hierarchy.  
->> **Divisive**: (top-down) start with one cluster, then splits are performed recursively down the hierarchy.  
+>> **Divisive**: (top-down) start with one cluster, then splits are performed recursively down the hierarchy.
+> <img src="https://cdn-images-1.medium.com/max/1000/1*ET8kCcPpr893vNZFs8j4xg.gif" width="250" height="250" />
 
 #### Centroid models: Data clusters is derived by the closeness of the data point to the centroid.   
 Its is an iterative proccess of updating the centroids to find the local optima, so setting the seed could be important for reproducability. You need to define the number of clusters befor hand.   
@@ -53,4 +66,27 @@ Every iteration the sliding window is shifted towards regions of higher density 
 > **Downside**: it doesn’t perform as well as others when the clusters are of varying density
 > <img src="https://cdn-images-1.medium.com/max/1000/1*tc8UF-h0nQqUfLC8-0uInQ.gif" width="250" height="250" />
 - **OPTICS**  
+
+Testing Clusters
+Silhouette - method of interpretation and validation of consistency within clusters of data.
+
+
+
+sources:
+General
+https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68  
+https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/ 
+https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/
+https://www.youtube.com/watch?v=ZVhtchqHlHs    
+https://github.com/ardianumam/Machine-Learning-From-The-Scratch/blob/master/kernel_kMeansClustering.py
+https://gist.github.com/mblondel/6230787 
+
+Clustering the US population: observation-weighted k-means
+https://towardsdatascience.com/clustering-the-us-population-observation-weighted-k-means-f4d58b370002
+https://github.com/leapingllamas/medium_posts/tree/master/observation_weighted_kmeans
+
+
+clustering notebooks I liked
+>[Cluster NYC Business History](https://github.com/vishelar/PUI2016_vys217/blob/master/HW11_vys217/HW11_2_vys217.ipynb)
+>[Identify specific socioechonomic changes in NYC over 10 years](https://github.com/vishelar/PUI2016_vys217/blob/master/Final/PUI2016_final_vys217.ipynb)
 
